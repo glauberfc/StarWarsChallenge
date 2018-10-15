@@ -30,15 +30,15 @@ class DetailsScreen extends Component {
   }
 
   componentDidMount() {
-    const people = this.props.people
-    const index = this.props.navigation.state.params.personIndex
+    const { people, navigation } = this.props
+    const index = navigation.state.params.personIndex
     this.setState({
       personDetails: people[index]
     })
   }
 
   render() {
-    const personDetails = this.state.personDetails
+    const { personDetails } = this.state
     return (
       <Container>
         <Label>Nome:</Label>

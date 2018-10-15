@@ -29,6 +29,6 @@ const initialState = {
   url: 'https://swapi.co/api/people/1/'
 }
 
-const people = (state = initialState, action) => {
-  return state
-}
+const people = (state = initialState) => state
+
+export default people

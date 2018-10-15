@@ -5,6 +5,8 @@ import people from './reducers'
 import mySaga from './sagas'
 
 const sagaMiddleware = createSagaMiddleware()
-export const store = createStore(people, applyMiddleware(sagaMiddleware))
+
+const store = createStore(people, applyMiddleware(sagaMiddleware))
+export default store
 
 sagaMiddleware.run(mySaga)

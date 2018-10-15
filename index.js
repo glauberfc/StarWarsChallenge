@@ -3,7 +3,7 @@ import { AppRegistry } from 'react-native'
 import { Provider } from 'react-redux'
 import App from './src/components/App'
 import { name as appName } from './app.json'
-import { store } from './src/store'
+import store from './src/store'
 
 // import { NativeModules } from 'react-native'
 

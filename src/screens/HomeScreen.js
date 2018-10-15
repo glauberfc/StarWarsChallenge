@@ -64,16 +64,18 @@ class HomeScreen extends Component {
   }
 
   componentDidMount() {
+    /* eslint-disable-next-line */
     this.props.fetchPeople()
   }
 
   render() {
+    const { people, navigation } = this.props
     return (
       <Container>
         <Title>Personagens</Title>
 
         <FlatList
-          data={this.props.people}
+          data={people}
           keyExtractor={(item, i) => i.toString()}
           renderItem={({ item, index }) => (
             <Card>
@@ -85,7 +87,7 @@ class HomeScreen extends Component {
               <DetailsButton
                 title="Ver detalhes"
                 onPress={() =>
-                  this.props.navigation.push('Details', {
+                  navigation.push('Details', {
                     personIndex: index
                   })
                 }
