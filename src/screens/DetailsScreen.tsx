@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import styled from 'styled-components'
+import styled from 'styled-components/native'
 
 const Container = styled.View`
   flex: 1;

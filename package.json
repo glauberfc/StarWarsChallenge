@@ -5,8 +5,8 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "lint": "eslint index.js \"./src/**/*(*.js|*.jsx)\"",
-    "format": "eslint --fix \"./src/**/*(*.js|*.jsx)\""
+    "lint": "tslint 'src/**/*.{ts, tsx}'",
+    "format": "tslint --fix 'src/**/*.{ts,tsx}'"
   },
   "dependencies": {
     "react": "16.3.1",
@@ -15,9 +15,14 @@
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
     "redux-saga": "^0.16.0",
-    "styled-components": "^3.4.10"
+    "styled-components": "^4.0.3"
   },
   "devDependencies": {
+    "@types/react": "^16.7.3",
+    "@types/react-native": "^0.57.7",
+    "@types/react-navigation": "^2.13.1",
+    "@types/react-redux": "^6.0.9",
+    "@types/styled-components": "^4.0.3",
     "babel-eslint": "^10.0.1",
     "babel-jest": "23.6.0",
     "babel-preset-react-native": "4.0.1",
@@ -30,7 +35,9 @@
     "eslint-plugin-react": "^7.11.1",
     "jest": "23.6.0",
     "prettier": "^1.14.3",
-    "react-test-renderer": "16.3.1"
+    "react-native-typescript-transformer": "^1.2.10",
+    "react-test-renderer": "16.3.1",
+    "typescript": "^3.1.6"
   },
   "jest": {
     "preset": "react-native"

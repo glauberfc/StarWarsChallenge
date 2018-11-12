@@ -1,8 +1,14 @@
 import { put, call } from 'redux-saga/effects'
 
-export const fetchPeople = () => ({ type: 'FETCH_PEOPLE' })
+interface fetchPeople {
+  type: 'FETCH_PEOPLE'
+}
 
-function api(url) {
+export function fetchPeople(): fetchPeople {
+  return { type: 'FETCH_PEOPLE' }
+}
+
+function api(url: string): Promise<any> {
   /* eslint-disable-next-line */
   return fetch(url).then(res => res.json())
 }
